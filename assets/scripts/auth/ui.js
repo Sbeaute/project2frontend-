@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('../scripts/store')
+const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
