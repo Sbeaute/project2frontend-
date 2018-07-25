@@ -22,11 +22,19 @@ api.showinventories()
 .then (ui2.showInventoriessuccess)
 .catch(ui2.failure)
 }
+const deleteInventories = function (event) {
+event.preventDefault()
+  console.log (event)
 
+api.deleteinventories()
+.then (ui2.deleteInventoriessuccess)
+.catch(ui2.failure)
+}
 
 const addHandlers = () => {
-  $('#get-inventories').on('click', showInventories)
-// $('#show')
+$('#get-inventories').on('click', showInventories)
+$('#delete-inventories').on('click', deleteInventories)
+
 }
 
 module.exports = {
