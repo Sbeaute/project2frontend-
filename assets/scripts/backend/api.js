@@ -5,7 +5,7 @@ const store =require('../store')
  * Show the user's projects.
  *
  */
-const getUserinventories = function () {
+const showinventories = function () {
 
   return $.ajax({
     url: config.apiUrl + '/inventories',
@@ -20,5 +20,5 @@ const getUserinventories = function () {
 }
 
 module.exports = {
-  getUserinventories
+  showinventories
 }
