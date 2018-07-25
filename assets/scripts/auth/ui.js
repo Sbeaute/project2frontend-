@@ -24,7 +24,7 @@ const signInSuccess = function (data) {
   $('#sign-in').css('display', '')
   $('#sign-in').css('display', 'none')
   console.log('signInSuccess ran. Data is :', data)
-  $('#start').css('display', 'block')
+  //$('#start').css('display', 'block')
   //store.user = data.user
 }
 
