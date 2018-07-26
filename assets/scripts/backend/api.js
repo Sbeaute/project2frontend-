@@ -17,7 +17,7 @@ const store =require('../store')
 
 
 
-const showinventories = function () {
+const showinventories = function (id) {
 
   return $.ajax({
     url: config.apiUrl + '/inventories',
@@ -30,9 +30,9 @@ const showinventories = function () {
   });
 
 }
- const  deleteinventories = function () {
+ const  deleteinventories = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/inventories',
+    url: config.apiUrl + `/inventories/${id}`,
      method: 'DELETE',
      contentType: "application/json; charset=utf-8",
      dataType: "json",
@@ -42,9 +42,30 @@ const showinventories = function () {
    });
 
  }
-
+const updateinventories = function (invId, invBrand, invModel, invImg) {
+  return $.ajax({
+    url: config.apiUrl + `/inventories/${invId}`,
+    method: 'PATCH',
+    data: {
+      'inventory':{
+        'brand': invBrand,
+        'model': invModel,
+        'imgurl': invImg
+      }
+    }
+  })
+}
+const createinventories = function (data) {
+  return $.ajax ({
+    url: config.apiUrl + '/inventories',
+    method: 'POST',
+    data
+  })
+}
 
 module.exports = {
-  showinventories,
- deleteinventories
+showinventories,
+deleteinventories,
+updateinventories,
+createinventories
 }

@@ -13,11 +13,45 @@
     </head>
     <body>
       <h1>DeadStock</h1>
-      <button id="get-inventories" type="button">Get inventories</button>
-      <button id="update-inventories" type="button">Update inventories</button>
-      <button id="delete-inventories" type="button">Delete inventories</button>
+      <button id="get-inventories" type="button">Get inventories </button>
+      </br>
+
+      
+<form id="update-inventories">
+  <div class="form-group">
+      <input type="submit"value="update Inventories" class="btn btn-default">
+    </div>
+    <div class="form-group">
+      <input id="inv-up-id" type="text" name="id-update" placeholder="id">
+    </div>
+    <div id="form-group">
+      <input id="inv-up-brand" type="text" name="brand-update" placeholder="brand">
+    </div>
+    <div class="form-group">
+      <input id="inv-up-model" type="text" name="model-update" placeholder="model">
+    </div>
+    <div class="form-group">
+      <input id="inv-up-imgurl" type="text" name="imgurl-update" placeholder="imgurlurl">
+    </div>
+</form>
+
+
+      <form id="delete-inventories">
+        <div class="form-group">
+          <label>Delete Inventories:</label>
+          <input id="inv-del" type="text" name="id-delete" placeholder="id">
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Delete Inventories" class="btn btn-default">
+        </div>
+      </form>
+
+
       <button id="create-inventories" type="button">Create inventories</button>
-      <form id="sign-up" class="border">
+      <input type="text" name="brand-create" placeholder="brand">
+      <input type="text" name="model-create" placeholder="model">
+      <input type="text" name="imgurl-create" placeholder="imgurl">
+    </br>  <form id="sign-up" class="border">
           <fieldset>
                 <legend>Sign up!</legend>
                 <input type="text" name="credentials[email]" placeholder="Email">
