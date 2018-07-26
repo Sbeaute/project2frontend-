@@ -67,7 +67,7 @@ const addHandlers = () => {
 $('#get-inventories').on('click', showInventories)
 $('#delete-inventories').on('submit', deleteInventories)
 $('#update-inventories').on('submit', updateInventories)
-$('#create-inventories').on('click', createInventories)
+$('#create-inventories').on('submit', createInventories)
 }
 
 module.exports = {

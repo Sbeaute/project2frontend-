@@ -16,7 +16,7 @@
       <button id="get-inventories" type="button">Get inventories </button>
       </br>
 
-      
+
 <form id="update-inventories">
   <div class="form-group">
       <input type="submit"value="update Inventories" class="btn btn-default">
@@ -41,17 +41,38 @@
           <label>Delete Inventories:</label>
           <input id="inv-del" type="text" name="id-delete" placeholder="id">
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <input type="submit" value="Delete Inventories" class="btn btn-default">
         </div>
+        <div>
+        <input id="inv-del-brand" type="text" name="brand-delete" placeholder="brand">
+      </div>
+<div class="form-group">
+  <input id="inv-del-model" type="text" name="model-delete" placeholder="model">
+</div>
+<div class="form-group">
+  <input id="inv-del-imgurl" type="text" name="imgurl-delete" placeholder="imgurl">
+</div> -->
       </form>
 
-
-      <button id="create-inventories" type="button">Create inventories</button>
-      <input type="text" name="brand-create" placeholder="brand">
-      <input type="text" name="model-create" placeholder="model">
-      <input type="text" name="imgurl-create" placeholder="imgurl">
-    </br>  <form id="sign-up" class="border">
+<form id="create-inventories">
+  <div class="form-group">
+      <input id="inv-create-id" type="text" name="id-create" placeholder="id">
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Create Inventories" class="btn btn-default">
+    </div>
+    <div class="form-group">
+      <input id="inv-create-brand" type="text" name="brand-create" placeholder="brand">
+    </div>
+    <div class="form-group">
+      <input id="inv-create-model" type="text" name="model-create" placeholder="model">
+    </div>
+    <div class="form-group">
+      <input id="inv-create-imgurl" type="text" name="imgurl-create" placeholder="imgurl">
+    </div>
+  </form>
+ <form id="sign-up" class="border">
           <fieldset>
                 <legend>Sign up!</legend>
                 <input type="text" name="credentials[email]" placeholder="Email">

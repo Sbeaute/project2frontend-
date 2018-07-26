@@ -55,11 +55,18 @@ const updateinventories = function (invId, invBrand, invModel, invImg) {
     }
   })
 }
-const createinventories = function (data) {
+const createinventories = function (invId, invBrand, invModel, invImg) {
   return $.ajax ({
-    url: config.apiUrl + '/inventories',
+    url: config.apiUrl + `/inventories/${invId}`,
     method: 'POST',
-    data
+    data:{
+      'inventory':{
+        'brand':invBrand,
+        'model': invModel,
+        'imgurl': invImg
+      }
+
+    }
   })
 }
 
