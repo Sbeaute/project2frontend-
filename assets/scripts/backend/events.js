@@ -59,6 +59,9 @@ api.updateinventories(invId, invBrand, invModel, invImg)
 const createInventories = function (event) {
 event.preventDefault()
 const data =getFormFields(event.target)
+api.createinventories(data)
+.then(ui2.createInventoriesSuccess)
+.catch(ui2.failure)
 }
 
 

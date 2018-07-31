@@ -15,8 +15,13 @@
       <h1>DeadStock</h1>
       <button id="get-inventories" type="button">Get inventories </button>
       </br>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>
 
+      <!-- Modal -->
 
+    <!-- <nav class="navbar navbar-inverse"> -->
 <form id="update-inventories">
   <div class="form-group">
       <input type="submit"value="update Inventories" class="btn btn-default">
@@ -63,15 +68,16 @@
       <input type="submit" value="Create Inventories" class="btn btn-default">
     </div>
     <div class="form-group">
-      <input id="inv-create-brand" type="text" name="brand-create" placeholder="brand">
+      <input id="inv-create-brand" type="text" name="inventory[brand]" placeholder="brand">
     </div>
     <div class="form-group">
-      <input id="inv-create-model" type="text" name="model-create" placeholder="model">
+      <input id="inv-create-model" type="text" name="inventory[model]" placeholder="model">
     </div>
     <div class="form-group">
-      <input id="inv-create-imgurl" type="text" name="imgurl-create" placeholder="imgurl">
+      <input id="inv-create-imgurl" type="text" name="inventory[imgurl]" placeholder="imgurl">
     </div>
   </form>
+
  <form id="sign-up" class="border">
           <fieldset>
                 <legend>Sign up!</legend>
