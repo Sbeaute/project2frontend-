@@ -46,6 +46,9 @@ const updateinventories = function(invId, invBrand, invModel, invImg) {
   return $.ajax({
     url: config.apiUrl + `/inventories/${invId}`,
     method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data: {
       'inventory': {
         'brand': invBrand,
