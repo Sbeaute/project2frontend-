@@ -21,6 +21,7 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
+
   //console.log('sign in ran!')
 
   const data = getFormFields(this)

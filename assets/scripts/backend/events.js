@@ -28,6 +28,7 @@ const deleteInventories = function (event) {
 event.preventDefault()
 const data = $('#inv-del').val()
   console.log(data)
+  // $('.modal').modal()
 
 api.deleteinventories(data)
 .then (ui2.deleteInventoriessuccess)

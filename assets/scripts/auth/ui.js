@@ -18,11 +18,16 @@ const signUpFailure = function (error) {
 const signInSuccess = function (data) {
   //$('#message').text('Signed in successfully')
   //$('#message').css('background-color', 'green')
+  $("#getinventoriesbutton").css("display", "block")
+  $("#create-inventories").css("display", "block")
+  $("#update-inventories").css("display", "block")
+  $("#delete-inventories").css("display", "block")
   $('.modal-body').html('')
   $('myModalLabel').html('loggedin')
   $('#myModal').modal('show')
-  $('#sign-in').css('display', '')
+  // $('#sign-in').css('display', '')
   $('#sign-in').css('display', 'none')
+
   console.log('signInSuccess ran. Data is :', data)
   //$('#start').css('display', 'block')
   //store.user = data.user
