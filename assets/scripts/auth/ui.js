@@ -7,6 +7,11 @@ const signUpSuccess = function (data) {
   $('#message').css('background-color', 'green')
   console.log('signUpSuccess ran. Data is :', data)
   $('#sign-up').css('display', 'none')
+  $('.modal-body').html('new inventory user welcome')
+  $('#myModalLabel').html('Sign In')
+  $('#myModal').modal('show')
+  $('#sign-in').css('display', '')
+  $('#sign-in').css('display', 'none')
 }
 
 const signUpFailure = function (error) {
@@ -22,7 +27,7 @@ const signInSuccess = function (data) {
   $("#create-inventories").css("display", "block")
   $("#update-inventories").css("display", "block")
   $("#delete-inventories").css("display", "block")
-  $('.modal-body').html('')
+  $('.modal-body').html('You now have access to user Inventories')
   $('myModalLabel').html('loggedin')
   $('#myModal').modal('show')
   // $('#sign-in').css('display', '')
@@ -45,6 +50,11 @@ const signOutSuccess = function () {
   console.log('signOutSuccess ran and nothing was returned!')
   $('#sign-Out').css('display', 'none')
   store.user = null
+  $('.modal-body').html('You have sign out of inventorires')
+  $('#myModalLabel').html('Sign In')
+  $('#myModal').modal('show')
+  $('#sign-in').css('display', '')
+  $('#sign-in').css('display', 'none')
 }
 
 const signOutFailure = function (error) {
