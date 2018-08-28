@@ -5,7 +5,7 @@ const showInventoriessuccess = function (data) {
   //$('#display').css('display',)
 
   console.log(data)
-  $('.modal-body').html('your inventory is now display')
+  $('.modal-body').html('your Inventories is now display')
   $('#myModalLabel').html('showInventoriessuccess')
   $('#myModal').modal('show')
 }
@@ -30,7 +30,7 @@ $('.modal-body').html('keep building.. you have updated your Inventories')
 
 const createInventoriesSuccess = function () {
 console.log('you have created a inventory')
-$('.modal-body').html('A masterpiece has been added to your Inventories ')
+$('.modal-body').html('A masterpiece has been added to your Inventories')
   $('#myModalLabel').html('createInventoriesSuccess')
   $('#myModal').modal('show')
 }

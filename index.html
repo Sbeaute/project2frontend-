@@ -6,7 +6,7 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+      <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
@@ -14,10 +14,160 @@
     <body>
       <h1>DeadStock</h1>
       <button id="get-inventories" type="button">Get inventories </button>
-        <button id="getinventoriesbutton" type="button">Get inventories </button>
       </br>
 
-<form id="update-inventories">
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Create inventories</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" id="create-inventories">
+    <div class="container">
+      <h1>Create Inventories</h1>
+      <p>Creating a masterpiece can be simple, just follow the steps below and create your inventory.</p>
+      <hr>
+      <label for="Brand"><b>Brand</b></label>
+      <input id="inv-create-id" type="text" placeholder="id" name="inventory[brand]" required>
+
+      <label for="p"><b>Model </b></label>
+      <input id="inv-create-model"type="text" placeholder="id" name="inventory[model]" required>
+       <label for="p"><b>Imgurl </b></label>
+      <input id="inv-create-imgurl"type="text" placeholder="id" name="inventory[imgurl]" required>
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Create Inventories</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Update inventories</button>
+
+<div id="id03" class="modal">
+<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+<form class="modal-content" id="update-inventories">
+  <div class="container">
+    <h1>Update Inventories</h1>
+    <p>In order to update your inventory you must list the following</p>
+    <hr>
+    <label for="update"><b>Update</b></label>
+    <input id="inv-up-id"  type="text" placeholder="id" name="id-update" required>
+
+    <label for="brand"><b>Brand</b></label>
+    <input id="inv-up-brand"  type="text" placeholder="brand" name="brand-update" required>
+
+    <label for="Model"><b>Model</b></label>
+    <input id="inv-up-model" type="text" placeholder="model" name="model-update" required>
+
+    <label for="Imgurl"><b>Imgurl</b></label>
+     <input id="inv-up-imgurl" type="text" name="imgurl-update" placeholder="imgurlurl">
+    <!-- <input id="inv-up-imgurl" type="text" placeholder="imgurl" name="imgurl-update" required> -->
+    <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">update inventories</button>
+          </div>
+  </div>
+</form>
+</div>
+
+ <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Delete inventories</button>
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" id="delete-inventories">
+    <div class="container">
+      <h1>Delete Inventories</h1>
+      <p>Delete your inventory just add your id to complete this form.</p>
+      <hr>
+      <label>Delete Inventories</label>
+      <input id="inv-del" type="text" placeholder="id" name="id-delete" required>
+      <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Delete Inventories</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+<button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Sign Up</button>
+<div id="id04" class="modal">
+  <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" id="sign-up">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>First timer..please fill in this form to create a user account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="email" name= "credentials[email]"required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="password" name="credentials[password]">
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Confirm Password" name="credentials[password_confirmation]">
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<button onclick="document.getElementById('id05').style.display='block'" style="width:auto;">Sign In</button>
+<div id="id05" class="modal">
+  <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" id="sign-in">
+    <div class="container">
+      <h1>Sign In</h1>
+      <p>Please fill in this form to sign into Tetris .</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Email" name= "credentials[email]">
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Password" name="credentials[password]">
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign In</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<button onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Sign Out</button>
+<div id="id06" class="modal">
+  <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" id="sign-out">
+    <div class="container">
+      <h1>Sign Out</h1>
+      <p>Leaving so soon ? please fill in this form to sign out.</p>
+      <hr>
+ <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id06').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Out</button>
+      </div>
+    </div>
+  </form>
+</div>
+<audio loop autoplay>
+    <source src="b.mp3"  type="audio/mpeg">
+</audio>
+<div id="display">
+</div>
+<!-- <form id="update-inventories">
   <div class="form-group">
       <input type="submit"value="update Inventories" class="btn btn-default">
     </div>
@@ -33,15 +183,15 @@
     <div class="form-group">
       <input id="inv-up-imgurl" type="text" name="imgurl-update" placeholder="imgurlurl">
     </div>
-</form>
+</form> -->
 
-
-      <form id="delete-inventories">
+<!-- <form id="delete-inventories">
         <div class="form-group">
           <label>Delete Inventories:</label>
           <input id="inv-del" type="text" name="id-delete" placeholder="id">
         </div>
-        <!-- <div class="form-group">
+
+         <div class="form-group">
           <input type="submit" value="Delete Inventories" class="btn btn-default">
         </div>
         <div>
@@ -52,9 +202,10 @@
 </div>
 <div class="form-group">
   <input id="inv-del-imgurl" type="text" name="imgurl-delete" placeholder="imgurl">
-</div> -->
-      </form>
-<form id="create-inventories">
+</div>
+    </form> -->
+
+<!-- <form id="create-inventories">
   <div class="form-group">
       <input id="inv-create-id" type="text" name="id-create" placeholder="id">
     </div>
@@ -70,9 +221,9 @@
     <div class="form-group">
       <input id="inv-create-imgurl" type="text" name="inventory[imgurl]" placeholder="imgurl">
     </div>
-  </form>
+  </form>  -->
 
- <form id="sign-up" class="border">
+ <!-- <form id="sign-up" class="border">
           <fieldset>
                 <legend>Sign up!</legend>
                 <input type="text" name="credentials[email]" placeholder="Email">
@@ -96,11 +247,33 @@
                 <legend>Sign Out!</legend>
                 <input type="submit" value="Sign out!">
               </fieldset>
-            </form>
-              <audio loop autoplay>
+            </form> -
+
+
+            <audio loop autoplay>
                 <source src="b.mp3"  type="audio/mpeg">
     </audio>
     <div id="display">
     </div>
+
+    <- modals function starts here -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">DeadstockX</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="message"></div>
+<!-- sign in and sign out modal buttons -->
     </body>
 </html>

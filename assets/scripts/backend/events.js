@@ -31,7 +31,7 @@ const data = $('#inv-del').val()
 
 
 api.deleteinventories(data)
-.then (ui2.deleteInventoriessuccess)
+.then (ui2.deleteInventoriesSuccess)
 .catch(ui2.failure)
 }
 
@@ -50,7 +50,7 @@ event.preventDefault()
   //  }
   //  if (inventories.id.length !== 0) {
 api.updateinventories(invId, invBrand, invModel, invImg)
-.then(ui2.oupdateInventoriesSuccess)
+.then(ui2.updateInventoriesSuccess)
 .catch(ui2.failure)
   }
 
