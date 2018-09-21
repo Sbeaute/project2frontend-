@@ -10,11 +10,12 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 body {
   background-image:url("https://i.imgur.com/kWbwO2k.jpg");
   background-attachment: fixed;
+  font-size: 20px;
 }
 
 H1 {
   text-align: center;
-  // font-size: 50px;
+  font-size: 120px;
 }
 
 h2 {
@@ -170,3 +171,6 @@ hr {
 //   text-align: center;
 //   font-size: 60px;
 //   }
+p{
+  font-size: 45px;
+}

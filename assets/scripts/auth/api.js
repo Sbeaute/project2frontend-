@@ -22,11 +22,13 @@ const signIn = function (data) {
 }
 
 const signOut = function () {
+  console.log(store.user.token)
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
+
     }
   })
 }

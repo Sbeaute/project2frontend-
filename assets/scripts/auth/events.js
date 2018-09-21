@@ -37,11 +37,12 @@ const onSignIn = function (event) {
 const onSignOut = function (event) {
   event.preventDefault()
   console.log('sign out ran')
-
   api.signOut()
     .then(() => {
-      ui.signOutSuccess
+      console.log("it works")
+      ui.signOutSuccess()
       store.user = null
+      console.log(store.user)
     })
     .catch(ui.signOutFailure)
 }
